@@ -14,6 +14,8 @@ class UserController {
 
     await user.addresses().createMany(addresses, trx);
 
+    await trx.commit();
+
     return user;
   }
 }
